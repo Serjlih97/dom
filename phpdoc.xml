@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor>
+    <parser>
+        <default-package-name>odva.pro</default-package-name>
+        <encoding>utf-8</encoding>
+        <target>doc/php/build</target>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <extensions>
+            <extension>php</extension>
+            <extension>php3</extension>
+            <extension>phtml</extension>
+        </extensions>
+        <visibility></visibility>
+    </parser>
+    <files>
+        <ignore-hidden>true</ignore-hidden>
+        <ignore-symlinks>true</ignore-symlinks>
+        <directory>app/*</directory>
+        <ignore>app/cache/*</ignore>
+        <ignore>app/config/config.php</ignore>
+    </files>
+    <transformer>
+        <target>doc/php</target>
+    </transformer>
+    <logging>
+        <level>error</level>
+    </logging>
+    <transformations>
+            <!-- <template name="responsive"/> -->
+            <template name="zend"/>
+            <!-- <template name="responsive-twig"/> -->
+    </transformations>
+    <translator>
+        <locale>en</locale>
+    </translator>
+</phpdocumentor>

@@ -1,0 +1,13 @@
+{
+    "name": "elsik26/funticket",
+    "description": "funik",
+    "authors": [
+        {
+            "name": "Serjlih97",
+            "email": "serjtema@yandex.ru"
+        }
+    ],
+    "require": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    }
+}
