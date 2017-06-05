@@ -609,7 +609,7 @@ display: block;
 font-family: 'Oswald', sans-serif;
 }
 .content-grid-single span{
-color: #BBA198;
+color: #000;
 line-height: 1.5em;
 font-size: 0.95em;
 font-family: 'Source Sans Pro', sans-serif;
@@ -617,7 +617,7 @@ margin-bottom: 1em;
 display:block;
 }
 .content-grid-single p{
-color: #BBA198;
+color: #000;
 line-height: 1.8em;
 font-size: 0.95em;
 font-family: 'Source Sans Pro', sans-serif;
@@ -1293,6 +1293,14 @@ width:100%;
 	}
 }
 @media (max-width: 360px) {
+	.members-list-header
+	{
+		font-size: 22px;
+	}
+	.event-descr
+	{
+		padding-top: 15px;
+	}
 	.banner
 	{
 		-webkit-background-size: cover;
