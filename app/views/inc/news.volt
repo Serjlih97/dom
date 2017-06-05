@@ -48,17 +48,34 @@
 
 	<div class="col-md-4 content-main-right">
 		<div class="search">
-				<h3>Поиск</h3>
-				<form>
-					<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
-					<input type="submit" value="">
-				</form>
+			<h3>Поиск</h3>
+			<form>
+				<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
+				<input type="submit" value="">
+			</form>
+		</div>
+		<div class="archives archives--links">
+			<h3>О нас писали</h3>
+			<ul>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+				<li><a href="#">Спортокиада 2009</a></li>
+			</ul>
 		</div>
 		<div class="archives">
 			<h3>Новости по годам</h3>
-			<li class="active"><a href="#">2017</a></li>
-			<li><a href="#">2016</a></li>
-			<li><a href="#">2015</a></li>
+			<ul>
+				<li class="active"><a href="#">2017</a></li>
+				<li><a href="#">2016</a></li>
+				<li><a href="#">2015</a></li>
+			</ul>
 		</div>
 	</div>
 	<div class="clearfix"></div>

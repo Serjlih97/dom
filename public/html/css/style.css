@@ -43,6 +43,31 @@ height:80px;
 .top-menu{
 	float:right;
 }
+.archives--links
+{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.archives--links ul
+{
+	max-height: 90px;
+	overflow-y: scroll;
+}
+.archives--links ul li
+{
+	border-bottom: none;
+	border-top: none;
+}
+.archives--links ul li a
+{
+	text-decoration: underline;
+}
+.not-found-page
+{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 .top-menu ul li{
 	float:left;
 	display: inline-block;
