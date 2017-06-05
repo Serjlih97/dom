@@ -12,6 +12,22 @@ class ControllerBase extends Controller
 	 */
 	public function initialize()
 	{
+		$menu = [
+			[
+				'name' => 'Новости',
+				'url' => '/'
+			],
+			[
+				'name' => 'Наши воспитанники',
+				'url' => '/members/'
+			],
+			[
+				'name' => 'Фотогалерея',
+				'url' => '/gallery/'
+			]
+		];
+		$this->view->setVar('title', 'Главная');
+		$this->view->setVar('menu', $menu);
 	}
 
 	/**

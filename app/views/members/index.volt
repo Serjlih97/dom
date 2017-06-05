@@ -2,6 +2,6 @@
 
 {% block content %}
 	<div class="container">
-		{% include '/inc/news.volt' %}
+		{% include '/inc/members.volt' %}
 	</div>
 {% endblock %}
