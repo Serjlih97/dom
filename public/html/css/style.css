@@ -40,6 +40,10 @@ height:80px;
 .logo{
 	float: left;
 }
+.logo img
+{
+	width: 90px;
+}
 .top-menu{
 	float:right;
 }
@@ -99,13 +103,13 @@ display:block;
 }
 .banner-head h1{
 font-size:2.3em;
-color:#fff;
+color:#f52f2f;
 text-transform:uppercase;
 font-weight:400;
 margin-bottom:10px;
 }
 .banner-head h2{
-color:#fff;
+color:#c10000;
 font-size:2em;
 font-weight:100;
 letter-spacing:1px;
@@ -426,6 +430,7 @@ padding-left:0;
 .contact-head{
 border-bottom:3px solid #fff;
 /*padding-bottom:2em;*/
+margin-top: 30px;
 }
 .contact-head h3,.terms h3{
 color: #87655B;
@@ -1361,6 +1366,10 @@ height: 41px;
 .logo {
 width: 25%;
 margin-top: 0.5em;
+}
+.logo img 
+{
+	width: 90px;
 }
 .banner-head h1 {
 font-size: 1em;

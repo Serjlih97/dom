@@ -11,6 +11,9 @@
 			<li{{ (section is defined and section == 'contacts') ? ' class="active"' : '' }}>
 				<a href="/contacts/">Контакты</a>
 			</li>
+			<li{{ (section is defined and section == 'about') ? ' class="active"' : '' }}>
+				<a href="/about/">О нас</a>
+			</li>
 			<div class="clearfix"></div>
 		</ul>
 	</div>
