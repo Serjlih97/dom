@@ -1395,7 +1395,7 @@ margin-top: 0.5em;
 }
 .logo img 
 {
-	width: 90px;
+	width: 45px;
 }
 .banner-head h1 {
 font-size: 1em;
@@ -1421,8 +1421,8 @@ font-size: 0.8em;
 }
 .content-grid-head h4 {
 font-size: 0.8em;
-float: left;
-margin-top: 5px;
+/*float: кшп;*/
+/*margin-top: 5px;*/
 }
 .content-grid-info {
 padding: 0.7em 12px;
