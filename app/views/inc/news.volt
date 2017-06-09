@@ -57,16 +57,10 @@
 		<div class="archives archives--links">
 			<h3>О нас писали</h3>
 			<ul>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
-				<li><a href="#">Спортокиада 2009</a></li>
+				{% for about in aboutUs %}
+					<li>
+						<a href="{{ about.link }}" target="_blanck">{{ about.name }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 		<div class="archives">

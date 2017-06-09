@@ -19,6 +19,14 @@ class ControllerBase extends Controller
 				'url' => '/'
 			],
 			[
+				'name' => 'Нужна помощь',
+				'url' => '/helps/'
+			],
+			[
+				'name' => 'Мероприятия',
+				'url' => '/events/'
+			],
+			[
 				'name' => 'Наши воспитанники',
 				'url' => '/members/'
 			],
@@ -27,6 +35,13 @@ class ControllerBase extends Controller
 				'url' => '/gallery/'
 			]
 		];
+		$links = Links::find();
+		$socialContacts = SocialContacts::find();
+		$aboutUs = AboutUs::find();
+
+		$this->view->setVar('aboutUs', $aboutUs);
+		$this->view->setVar('socialContacts', $socialContacts);
+		$this->view->setVar('links', $links);
 		$this->view->setVar('siteInfo', $siteInfo);
 		$this->view->setVar('title', 'Главная');
 		$this->view->setVar('menu', $menu);
