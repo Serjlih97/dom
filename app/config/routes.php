@@ -32,5 +32,14 @@ $router->add(
 	]
 );
 
+$router->add(
+	"/gallery/albom/:int/", [
+		'controller' => 'gallery',
+		'action'     => 'albom',
+		'id'         => 1
+	]
+);
+
+
 $router->handle();
 return $router;

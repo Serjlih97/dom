@@ -4,36 +4,31 @@
 	<div class="container">
 		<div class="contact-head">
 			<h3>Контакты</h3>
+			{{ siteInfo.text_contacts }}
+			<br>
 		</div>
 		<div class="address">
 			<h3>Где мы находимся</h3>
 			<div class="col-md-6 locations">
-				 <ul>
-					<li><span></span></li>
-					<li>
-						<div class="address-info">
-							<h4>Владикавказ</h4>
-							<p>Пр. Мира д.64</p>
-							<p>Телефон: 123 456 7890</p>
-							<p>Email:<a href="mailto:info@example.com">info(at)example.com</a></p>
-							<h5><a href="">Посмотреть на карте>></a></h5>
-						</div>
-					</li>
-				 </ul>
-				 <ul>
-					<li><span></span></li>
-					<li>
-						<div class="address-info">
-							<h4>Владикавказ</h4>
-							<p>Пр. Мира д.64</p>
-							<p>Телефон: 123 456 7890</p>
-							<p>Email:<a href="mailto:info@example.com">info(at)example.com</a></p>
-							<h5><a href="">Посмотреть на карте>></a></h5>
-						</div>
-					</li>
-				 </ul>
+				{% for contact in contacts %}
+					<ul>
+						<li><span></span></li>
+						<li>
+							<div class="address-info">
+								<h4>{{ contact.city }}</h4>
+								<p>{{ contact.street }}</p>
+								<p>Телефон: {{ contact.phone }}</p>
+								<p>Email:<a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+								<h5><a href="{{ contact.map }}" target="_blank">Посмотреть на карте>></a></h5>
+							</div>
+						</li>
+					</ul>
+				{% endfor %}
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block menu %}
 {% endblock %}

@@ -12,6 +12,7 @@ class ControllerBase extends Controller
 	 */
 	public function initialize()
 	{
+		$siteInfo = SiteInfo::findFirst();
 		$menu = [
 			[
 				'name' => 'Новости',
@@ -26,6 +27,7 @@ class ControllerBase extends Controller
 				'url' => '/gallery/'
 			]
 		];
+		$this->view->setVar('siteInfo', $siteInfo);
 		$this->view->setVar('title', 'Главная');
 		$this->view->setVar('menu', $menu);
 	}

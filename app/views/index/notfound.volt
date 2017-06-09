@@ -6,3 +6,6 @@
 		<p>Страница не найдена. <a href="/">На главную</a></p>
 	</div>
 {% endblock %}
+
+{% block menu %}
+{% endblock %}
