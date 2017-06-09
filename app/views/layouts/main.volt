@@ -5,6 +5,7 @@
 
 	<link href="/html/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="/html/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="/html/css/jquery.fancybox.min.css" rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
 
@@ -15,6 +16,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/html/js/move-top.js"></script>
 	<script type="text/javascript" src="/html/js/easing.js"></script>
+	<script type="text/javascript" src="/html/js/jquery.fancybox.min.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){

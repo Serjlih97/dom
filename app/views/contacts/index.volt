@@ -4,8 +4,7 @@
 	<div class="container">
 		<div class="contact-head">
 			<h3>Контакты</h3>
-			{{ siteInfo.text_contacts }}
-			<br>
+			
 		</div>
 		<div class="address">
 			<h3>Где мы находимся</h3>
@@ -27,6 +26,8 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
+		{{ siteInfo.text_contacts }}
+		<br>
 	</div>
 {% endblock %}
 
