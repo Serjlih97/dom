@@ -1,7 +1,7 @@
 <div class="content-grids">
 	<div class="col-md-8 content-main">
 		{% for news in newsPaginator.items %}
-			{% if loop.index == 1 %}
+			{% if loop.index == 1 and newsPaginator.current == 1 %}
 				<div class="content-grid">
 					<div class="content-grid-head">
 						<h3>Последняя новость</h3>
@@ -42,23 +42,9 @@
 	</div>
 
 	<div class="col-md-4 content-main-right">
-		<div class="search">
-			<h3>Поиск</h3>
-			<form>
-				<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
-				<input type="submit" value="">
-			</form>
-		</div>
-		<div class="archives archives--links">
-			<h3>О нас писали</h3>
-			<ul>
-				{% for about in aboutUs %}
-					<li>
-						<a href="{{ about.link }}" target="_blanck">{{ about.name }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
+		{% include '/inc/search.volt' %}
+		{% include '/inc/aboutUs.volt' %}
+		
 		<div class="archives">
 			<h3>Новости по годам</h3>
 			<ul>

@@ -31,6 +31,36 @@ var main = {
 				if(typeof e.success != 'undefined' && e.success)
 					$('._ajax-content').html(e.html);
 			});
+		},
+		getHelpsPage: function(page)
+		{
+			var action = '/ajax/getHelps/';
+			
+			$.ajax({
+				url      : action,
+				type     : 'POST',
+				dataType : 'json',
+				data     : {page:page}
+			}).done(function(e)
+			{
+				if(typeof e.success != 'undefined' && e.success)
+					$('._ajax-content').html(e.html);
+			});
+		},
+		getEventsPage: function(page)
+		{
+			var action = '/ajax/getEvents/';
+			
+			$.ajax({
+				url      : action,
+				type     : 'POST',
+				dataType : 'json',
+				data     : {page:page}
+			}).done(function(e)
+			{
+				if(typeof e.success != 'undefined' && e.success)
+					$('._ajax-content').html(e.html);
+			});
 		}
 	}
 }
