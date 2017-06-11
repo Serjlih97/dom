@@ -28,5 +28,7 @@ class GalleryController extends ControllerBase
 			$this->pageNotFound();
 
 		$this->view->setVar('photos', $albom->photos);
+		$this->view->setVar('title', $albom->name);
+		$this->view->setVar('page', 'Фотогалерея');
 	}
 }

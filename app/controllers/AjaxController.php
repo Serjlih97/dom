@@ -31,4 +31,41 @@ class AjaxController extends ControllerBase
 		$view = $this->view->getRender('inc', 'news');
 		return $this->jsonResult(['success' => true, 'html' => $view]);
 	}
+
+	public function getHelpsAction()
+	{
+		$page = $this->request->getPost('page');
+		$helpsBuilder    = $this->modelsManager->createBuilder()
+			->from('Helps')
+			->orderBy('date_end desc')
+			->where('date_end > now()');
+
+		$helpsPaginator = new PaginatorQueryBuilder([
+			'builder' => $helpsBuilder,
+			'limit'   => 2,
+			'page'    => $page
+		]);
+		$helpsPaginator = $helpsPaginator->getPaginate();
+
+		$this->view->setVar('helpsPaginator', $helpsPaginator);
+		$view = $this->view->getRender('help/inc', 'helps');
+		return $this->jsonResult(['success' => true, 'html' => $view]);
+	}
+
+	public function getEventsAction()
+	{
+		$page = $this->request->getPost('page');
+		$eventsBuilder    = $this->modelsManager->createBuilder()
+			->from('Events')
+			->orderBy('date desc');
+
+		$eventsPaginator = new PaginatorQueryBuilder([
+			'builder' => $eventsBuilder,
+			'limit'   => 2,
+			'page'    => $page
+		]);
+		$eventsPaginator = $eventsPaginator->getPaginate();
+		$view = $this->view->getRender('events/inc', 'events');
+		return $this->jsonResult(['success' => true, 'html' => $view]);
+	}
 }

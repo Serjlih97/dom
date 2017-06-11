@@ -2,6 +2,8 @@
 
 {% block content %}
 	<div class="container">
-		{% include '/inc/news.volt' %}
+		<div class="_ajax-content">
+			{% include '/help/inc/helps.volt' %}
+		</div>
 	</div>
 {% endblock %}
