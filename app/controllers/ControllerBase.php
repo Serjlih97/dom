@@ -20,7 +20,7 @@ class ControllerBase extends Controller
 			],
 			[
 				'name' => 'Нужна помощь',
-				'url' => '/helps/'
+				'url' => '/help/'
 			],
 			[
 				'name' => 'Мероприятия',
