@@ -9,4 +9,20 @@ use Phalcon\Mvc\User\Component;
  */
 class Elements extends Component
 {
+	public function getNewsYears()
+	{
+		$news = News::find(['order' => 'date desc', 'group' => 'date']);
+		$years = [];
+		
+		foreach($news as $newsElement)
+			$years[] = $newsElement->getYear(); 
+
+		return $years;
+
+	}
+
+	public function thisYear()
+	{
+		return date('Y');
+	}
 }

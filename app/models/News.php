@@ -25,6 +25,17 @@ class News extends ModelBase
 	}
 
 	/**
+	 * Функция для преобразования dateTime в дату формата год
+	 * @return string Дата новости в формате год
+	 */
+	public function getYear()
+	{
+		$unixTime = strtotime($this->date);
+		$date     = date('Y', $unixTime);
+		return $date;
+	}
+
+	/**
 	 * Функция для получения нужного размера картинка (Размеры указываються в админ понели)
 	 * @param  string $size Название нужного размера изображения
 	 * @return string        Адрес изображения с нужным размером

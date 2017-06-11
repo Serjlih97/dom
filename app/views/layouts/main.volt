@@ -74,6 +74,8 @@
 		</script>
 		<script type="text/javascript" src="/html/js/scripts.js"></script>
 	{% endblock %}
+	{% block unicSctipts %}
+	{% endblock %}
 	<a href="#to-top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
 </body>
 </html>

@@ -11,9 +11,16 @@ class IndexController extends ControllerBase
 			->from('News')
 			->orderBy('date desc');
 
+		if(!empty($this->request->get('year')))
+		{
+			$year = $this->request->get('year');
+			$newsBuilder->where('date BETWEEN "' . $year . '-01-01" AND "' . $year . '-12-31"');
+			$this->view->setVar('selectYear', $year);
+		}
+
 		$newsPaginator = new PaginatorQueryBuilder([
 			'builder' => $newsBuilder,
-			'limit'   => 5,
+			'limit'   => 2,
 			'page'    => 1
 		]);
 		$newsPaginator = $newsPaginator->getPaginate();

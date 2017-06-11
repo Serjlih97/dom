@@ -33,14 +33,9 @@
 		{% if newsPaginator.total_pages > 1 %}
 			<div class="pages">
 				<ul>
-					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li><a href="#">Предыдущая</a></li>
-					<li><a href="#">Следущая</a></li>
+					{% set paginator = newsPaginator %}
+					{% set functionName = 'main.paginator.getNewsPage' %}
+					{% include '/inc/paginator.volt' %}
 				</ul>
 			</div>
 		{% endif %}
@@ -59,16 +54,17 @@
 			<ul>
 				{% for about in aboutUs %}
 					<li>
-						<a href="{{ about.link }}" target="_blanck">{{ about.name }}</a></li>
+						<a href="{{ about.link }}" target="_blanck">{{ about.name }}</a>
+					</li>
 				{% endfor %}
 			</ul>
 		</div>
 		<div class="archives">
 			<h3>Новости по годам</h3>
 			<ul>
-				<li class="active"><a href="#">2017</a></li>
-				<li><a href="#">2016</a></li>
-				<li><a href="#">2015</a></li>
+				{% for year in elements.getNewsYears() %}
+					<li{{ (selectYear is defined and selectYear == year) ? ' class="active"' : '' }}><a href="/?year={{ year }}">{{ year }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
