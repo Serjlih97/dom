@@ -26,6 +26,10 @@ ul,label{
 	margin:0;
 	padding:0;
 }
+img
+{
+	max-width: 100%;
+}
 .soc-icon
 {
 	width: 40px !important;
@@ -525,10 +529,11 @@ padding-left:0;
 margin-top:3em;
 }
 .locations ul{
-margin-bottom:2em;
+margin-bottom:1em;
 }
 .locations ul li{
 display:inline-block;
+vertical-align: top;
 }
 .locations ul li span {
 background: url(../images/find.png) no-repeat 0px 0px;
@@ -537,7 +542,7 @@ width: 48px;
 height: 48px;
 display: inline-block;
 margin-right: 0.5em;
-padding-bottom: 7em;
+padding-bottom:5em;
 }
 .address-info  p{
 color: #A5877D;
@@ -1539,7 +1544,7 @@ font-size: 0.9em;
 font-size: 0.8em;
 }
 .locations ul {
-margin-bottom: 1.3em;
+margin-bottom: 0.8em;
 }
 .terms p, .term li {
 font-size: 0.8em;
