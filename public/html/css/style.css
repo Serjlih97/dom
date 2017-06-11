@@ -233,6 +233,9 @@ background:#FFC600;
 padding: 1em 18px 0 18px;
 margin-top:3em;
 }
+.content-grid-sec:first-child {
+	margin-top: 0;
+}
 .content-sec-info h3{
 margin-bottom:8px;
 }
@@ -267,7 +270,11 @@ font-size:0.95em;
 color:#BDA497;
 font-family: 'Source Sans Pro', sans-serif;
 }
-.pages ul li.active a,.pages ul li a:hover{
+.pages ul li a.active
+{
+	color: #e4573f;
+}
+.pages ul li a.active,.pages ul li a:hover{
 color:#E82806;
 }
 /*----*/
@@ -1170,6 +1177,22 @@ width:100%;
 	}
 }
 @media (max-width: 480px){
+	.logo {
+		width: 25%;
+		margin-top: 0.5em;
+		margin-top: -10px;	
+	}
+	.logo img 
+	{
+		width: 45px;
+	}
+	.banner {
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.member-card-bg {
+		padding: 0;
+	}
 	.header {
 	height: 48px;
 	}
@@ -1346,11 +1369,27 @@ width:100%;
 	padding: 0.4em 1.3em;
 	font-size: 0.8em;
 	}
+	.logo {
+		margin-top: 0.4em;	
+	}
 	.comments {
 	margin-top: 1.5em;
 	}
 	.logo img {
 		margin-top: -7px;
+	}
+	.banner-links ul li
+	{
+		float: none;
+		display: block;
+	}
+	.banner-links ul li a
+	{
+		font-size: 0.9em;
+	}
+	.top-menu ul li a {
+		margin: 0.9em 0.8em;
+		font-size: 0.8em;
 	}
 }
 @media (max-width: 360px) {
@@ -1368,15 +1407,7 @@ width:100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	.banner-links ul li
-	{
-		float: none;
-		display: block;
-	}
-	.banner-links ul li a
-	{
-		font-size: 0.9em;
-	}
+	
 	.event-gallery-header
 	{
 		font-size: 18px;
@@ -1385,23 +1416,14 @@ width:100%;
 	{
 		text-align: justify;
 	}
+	.header {
+	height: 41px;
+	}
+
 }
 @media (max-width: 320px){
-.top-menu ul li a {
-margin: 0.9em 0.8em;
-font-size: 0.8em;
-}
-.header {
-height: 41px;
-}
-.logo {
-width: 25%;
-margin-top: 0.5em;
-}
-.logo img 
-{
-	width: 45px;
-}
+
+
 .banner-head h1 {
 font-size: 1em;
 margin-bottom: 1px;
@@ -1448,6 +1470,7 @@ height: 130px;
 .content-grid-sec {
 margin-top: 1em;
 }
+
 .content-sec-info h4 {
 margin-bottom: 0.65em;
 font-size: 0.8em;
