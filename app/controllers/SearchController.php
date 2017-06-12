@@ -7,6 +7,7 @@ class SearchController extends ControllerBase
 	public function indexAction()
 	{
 		$search = $this->request->get('search');
+		$activetab = '';
 
 		if(empty($search))
 		{
@@ -22,12 +23,18 @@ class SearchController extends ControllerBase
 
 		$news  = News::find($filter);
 
+		if(count($news) > 0)
+			$activetab = 'news';
+
 		$filter = [
 			'conditions' => 'name LIKE ?0 OR text LIKE ?0',
 			'order' => 'date_end desc',
 			'bind' => ["%{$search}%"]
 		];
 		$helps = Helps::find($filter);
+
+		if(count($helps) > 0)
+			$activetab = 'helps';
 
 		$filter = [
 			'conditions' => 'name LIKE ?0 OR text LIKE ?0',
@@ -36,6 +43,10 @@ class SearchController extends ControllerBase
 		];
 		$events = Events::find($filter);
 
+		if(count($events) > 0)
+			$activetab = 'events';
+
+		$this->view->setVar('activetab', $activetab);
 		$this->view->setVar('newsList', $news);
 		$this->view->setVar('helps', $helps);
 		$this->view->setVar('events', $events);

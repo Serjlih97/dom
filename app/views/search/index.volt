@@ -5,13 +5,13 @@
 		<div class="content-grids">
 			<div class="col-md-8 content-main">
 				<div class="search-tabs clearfix">
-					<div class="tab {{ (newsList|length == 0 ) ? 'disable' : '' }}" data-tab-id="1" onclick="main.openTab(this, event);">Новости {{ newsList|length }}</div>
-					<div class="tab {{ (helps|length == 0 ) ? 'disable' : '' }}" data-tab-id="2" onclick="main.openTab(this, event);">Нужна помощь {{ helps|length }}</div>
-					<div class="tab {{ (events|length == 0 ) ? 'disable' : '' }}" data-tab-id="3" onclick="main.openTab(this, event);">Мероприятия {{ events|length }}</div>
+					<div class="tab {{ (newsList|length == 0 ) ? 'disable' : '' }} {{ (activetab == 'news') ? 'active' : '' }}" data-tab-id="1" onclick="main.openTab(this, event);">Новости {{ newsList|length }}</div>
+					<div class="tab {{ (helps|length == 0 ) ? 'disable' : '' }}  {{ (activetab == 'helps') ? 'active' : '' }}" data-tab-id="2" onclick="main.openTab(this, event);">Нужна помощь {{ helps|length }}</div>
+					<div class="tab {{ (events|length == 0 ) ? 'disable' : '' }}  {{ (activetab == 'events') ? 'active' : '' }}" data-tab-id="3" onclick="main.openTab(this, event);">Мероприятия {{ events|length }}</div>
 				</div>
 				{% if newsList|length > 0 or helps|length > 0 or events|length > 0 %}
 					{% if newsList|length > 0 %}
-						<div class="tab-content tab-1 active">
+						<div class="tab-content tab-1 {{ (activetab == 'news') ? 'active' : '' }}">
 							{% for news in newsList %}
 								<div class="content-grid-sec">
 									<div class="content-sec-info">
@@ -26,7 +26,7 @@
 						</div>
 					{% endif %}
 					{% if helps|length > 0 %}
-						<div class="tab-content tab-2">
+						<div class="tab-content tab-2 {{ (activetab == 'helps') ? 'active' : '' }}">
 							{% for help in helps %}
 								<div class="content-grid-sec">
 									<div class="content-sec-info">
@@ -42,7 +42,7 @@
 					{% endif %}
 
 					{% if events|length > 0 %}
-						<div class="tab-content tab-3">
+						<div class="tab-content tab-3 {{ (activetab == 'events') ? 'active' : '' }}">
 							{% for event in events %}
 								<div class="content-grid-sec">
 									<div class="content-sec-info">
