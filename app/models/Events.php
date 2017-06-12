@@ -5,6 +5,18 @@
 class Events extends ModelBase
 {
 	/**
+	 * Инит функция в ней :
+	 *   Создается связь с таблицей альбомов(hasOne)
+	 */
+	public function initialize()
+	{
+		// Тикет пользователя
+		$this->hasOne('albom_id', 'Alboms', 'id', [
+			'alias'  => 'albom'
+		]);
+	}
+
+	/**
 	 * Функция для преобразования dateTime в дату формата день.месяц.год
 	 * @return string Дата новости в формате день.месяц.год
 	 */
@@ -21,7 +33,7 @@ class Events extends ModelBase
 	 */
 	public function getUrl()
 	{
-		return "/help/{$this->id}/";
+		return "/events/{$this->id}/";
 	}
 
 	/**

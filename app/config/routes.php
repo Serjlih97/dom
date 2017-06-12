@@ -33,5 +33,13 @@ $router->add(
 	]
 );
 
+$router->add(
+	"/events/:int/", [
+		'controller' => 'events',
+		'action'     => 'detail',
+		'id'         => 1
+	]
+);
+
 $router->handle();
 return $router;
