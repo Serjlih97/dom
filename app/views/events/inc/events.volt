@@ -3,7 +3,7 @@
 		{% for event in eventsPaginator.items %}
 			<div class="content-grid-sec">
 				<div class="content-sec-info">
-					<h3><a href="single.html">{{ event.name }}</a></h3>
+					<h3><a href="{{ event.getUrl() }}">{{ event.name }}</a></h3>
 					<h4>{{ event.getDate() }}</h4>
 					<p>{{ event.text|striptags }}</p>
 					<img src="{{ event.getPreview() }}" alt="{{ event.name }}"/>

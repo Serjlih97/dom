@@ -3,7 +3,7 @@
 		{% for help in helpsPaginator.items %}
 			<div class="content-grid-sec">
 				<div class="content-sec-info">
-					<h3><a href="single.html">{{ help.name }}</a></h3>
+					<h3><a href="{{ help.getUrl() }}">{{ help.name }}</a></h3>
 					<h4>до {{ help.getDate() }}</h4>
 					<p>{{ help.text|striptags }}</p>
 					<img src="{{ help.getPreview() }}" alt="{{ help.name }}"/>

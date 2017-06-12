@@ -20,7 +20,7 @@
 			{% else %}
 				<div class="content-grid-sec">
 					<div class="content-sec-info">
-						<h3><a href="single.html">{{ news.name }}</a></h3>
+						<h3><a href="{{ news.getUrl() }}">{{ news.name }}</a></h3>
 						<h4>{{ news.getDate() }}</h4>
 						<p>{{ news.html|striptags }}</p>
 						<img src="{{ news.getPreview() }}" alt="{{ news.name }}"/>
