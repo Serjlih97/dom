@@ -7,25 +7,19 @@
 			<div class="members-list">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="members-list-header">Название мероприятия</h1>
+						<h1 class="members-list-header">{{ (event is defined) ? event.name : albom.name }}</h1>
 					</div>
 				</div>
-				<div class="row event-descr">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nostrum nam similique a veniam cum? Mollitia facilis labore, sit cumque quae. Odio quos quae explicabo provident cumque maiores, placeat deserunt!</p>
-						<p>Далеко-далеко за словесными <a href="#">горами</a> в <b>стране</b>, гласных и согласных живут рыбные тексты. От всех диких даже страну если повстречался, которое подпоясал гор, рыбного, грамматики проектах, ручеек там алфавит единственное своего себя океана агенство.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque inventore vitae vero consequatur, sequi officia, perferendis vel laborum aspernatur numquam facere repellendus quia tempore dignissimos temporibus corrupti ratione perspiciatis. Quam.</p>
-						<ul>
-							<li>Lorem ipsum.</li>
-							<li>Animi, natus.</li>
-							<li>Vero, modi?</li>
-							<li>Cumque, accusantium!</li>
-						</ul>
+				{% if event is defined %}
+					<div class="row event-descr">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							{{ event.text }}
+						</div>
 					</div>
-				</div>
+				{% endif %}
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h2 class="event-gallery-header">Фотографии с мероприятия ТУТ НАЗВАНИЕ МЕРОПРИЯТИЯ</h2>
+						<h2 class="event-gallery-header">Фотографии с мероприятия {{ (event is defined) ? event.name : albom.name }}</h2>
 					</div>
 				</div>
 				<div class="row">

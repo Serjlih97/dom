@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="logo">
-		<a href="/"><img src="/html/images/logo.svg" title="soup" width="65%" /></a>
+		<a href="/"><img src="{{ siteInfo.getLogo() }}" title="soup" width="65%" /></a>
 	</div>
 	<div class="top-menu">
 		<span class="menu"></span>

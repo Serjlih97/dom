@@ -27,6 +27,12 @@ class GalleryController extends ControllerBase
 		if(!$albom)
 			$this->pageNotFound();
 
+		$event = Events::findFirstByAlbom_id($id);
+
+		if($event)
+			$this->view->setVar('event', $event);
+			
+		$this->view->setVar('albom', $albom);
 		$this->view->setVar('photos', $albom->photos);
 		$this->view->setVar('title', $albom->name);
 		$this->view->setVar('page', 'Фотогалерея');

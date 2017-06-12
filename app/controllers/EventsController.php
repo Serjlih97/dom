@@ -21,4 +21,20 @@ class EventsController extends ControllerBase
 		$this->view->setVar('title', 'Мероприятия');
 		$this->view->setVar('page', 'Мероприятия');
 	}
+
+	public function detailAction($id = false)
+	{
+		if(!$id)
+			$this->pageNotFound();
+
+		$event = Events::findFirstById($id);
+
+		if(!$event)
+			$this->pageNotFound();
+
+		$this->view->setVar('element', $event);
+
+		$this->view->setVar('title', $event->name);
+		$this->view->setVar('page', 'Мероприятия');
+	}
 }
