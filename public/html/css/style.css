@@ -30,6 +30,35 @@ img
 {
 	max-width: 100%;
 }
+.slider
+{
+	width: 80%;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.big-slider__item img
+{
+	width: 100%;
+}
+.small-slider
+{
+	margin-top: 20px;
+}
+.small-slider__item
+{
+	padding: 0 5px;
+}
+.small-slider__item img
+{
+	width: 100%;
+}
+.slick-prev:before,
+.slick-next:before
+{
+	color: #eb5a41;
+}
 .soc-icon
 {
 	width: 40px !important;
@@ -1177,6 +1206,10 @@ width:100%;
 	}
 }
 @media (max-width: 480px){
+	.slider
+	{
+		width: 100%;
+	}
 	.logo {
 		width: 25%;
 		margin-top: 0.5em;
