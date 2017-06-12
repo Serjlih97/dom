@@ -30,6 +30,36 @@ img
 {
 	max-width: 100%;
 }
+.search-tabs
+{
+	margin-bottom: 20px;
+}
+.tab
+{
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+}
+.tab.active
+{
+	background-color: #EB5A41;
+	color: #fff;
+}
+.tab.disable
+{
+	pointer-events: none;
+	opacity: 0.5;
+}
+.tab-content
+{
+	display: none;
+}
+.tab-content.active
+{
+	display: block;
+}
 .file
 {
 	padding-left: 35px;
@@ -279,7 +309,7 @@ color:#EB5A41;
 background:#FFC600;
 }
 .content-grid-sec{
-padding: 1em 18px 0 18px;
+padding: 1em 18px 0 0;
 margin-top:3em;
 }
 .content-grid-sec:first-child {
@@ -1558,7 +1588,7 @@ padding: 0.4em 0.58em;
 font-size: 0.75em;
 }
 .content-grid-sec {
-padding: 0.5em 12px 0 12px;
+padding: 0.5em 12px 0 0;
 }
 .pages ul li a {
 margin: 0 4px;

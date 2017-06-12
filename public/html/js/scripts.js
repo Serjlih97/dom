@@ -22,6 +22,20 @@ var main = {
 		if($('.fancy-box').length > 0)
 			$('.fancy-box').fancyBox();
 	},
+	
+	openTab: function(instance, event)
+	{
+		event.preventDefault();
+		if(!$(instance).hasClass('active'))
+		{
+			var tabId = $(instance).data('tab-id');
+			$(instance).siblings().removeClass('active');
+			$(instance).addClass('active');
+			$('.tab-' + tabId).siblings().removeClass('active');
+			$('.tab-' + tabId).addClass('active');
+		}
+	},
+
 	initSlider: function(sliders)
 	{
 		if($('.slider').length > 0)
