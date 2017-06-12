@@ -4,6 +4,8 @@
 	<title>{{ title }}</title>
 
 	<link href="/html/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/html/css/slick.css" rel='stylesheet' type='text/css' />
+	<link href="/html/css/slick-theme.css" rel='stylesheet' type='text/css' />
 	<link href="/html/css/style.css" rel='stylesheet' type='text/css' />
 	<link href="/html/css/jquery.fancybox.min.css" rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
@@ -17,6 +19,7 @@
 	<script type="text/javascript" src="/html/js/move-top.js"></script>
 	<script type="text/javascript" src="/html/js/easing.js"></script>
 	<script type="text/javascript" src="/html/js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="/html/js/slick.min.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){
