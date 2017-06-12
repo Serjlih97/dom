@@ -30,6 +30,26 @@ img
 {
 	max-width: 100%;
 }
+.file
+{
+	padding-left: 35px;
+	position: relative;
+	margin-top: 8px;
+	margin-bottom: 22px;
+}
+.file:before
+{
+	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	left: 0;
+	top: 0;
+	background-image: url('../images/file.svg');
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
 .slider
 {
 	width: 80%;
@@ -928,6 +948,33 @@ width:100%;
 	object-fit: cover;
 	object-position: top center;
 }
+.requisites
+{
+	margin: 20px 0;
+    padding: 15px;
+    background-color: #eb5a41;
+    color: white;
+    font-size: 18px;
+}
+.requisites-header
+{
+	font-size: 20px;
+	margin-bottom: 14px;
+}
+.requisites-list
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.requisites-list li
+{
+	margin-bottom: 8px;
+}
+.requisites-list li:last-child
+{
+	margin-bottom: 0;
+}
 /*--responsive--*/
 @media (max-width: 1024px){
 	.top-menu ul li a {
@@ -1455,8 +1502,6 @@ width:100%;
 
 }
 @media (max-width: 320px){
-
-
 .banner-head h1 {
 font-size: 1em;
 margin-bottom: 1px;
@@ -1645,7 +1690,7 @@ overflow: hidden;
 height: 31px;
 }
 .content-grid-single p {
-height: 61px;
+height: auto;
 font-size: 0.8em;
 }
 .content-form form input[type="text"], .content-form form textarea {
