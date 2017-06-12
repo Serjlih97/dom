@@ -14,7 +14,17 @@
 						<img class="single-pic" src="{{ element.getPreview() }}" alt="{{ element.name }}"/>
 						{{ element.text }}
 					</div>
-				</div>			 			 
+					{% if element.getPays() %}
+						<div class="requisites">
+							<div class="requisites-header">Счета для окозания помощи</div>
+							<ul class="requisites-list">
+								{% for pay in element.getPays() %}
+									<li>{{ pay['Счет'] }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				</div>			 
 			</div>
 			 
 			<div class="col-md-4 content-main-right">

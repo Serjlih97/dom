@@ -36,4 +36,13 @@ class Helps extends ModelBase
 		$image = json_decode($this->photo, true)[0]['path'];
 		return $image;
 	}
+
+	public function getPays()
+	{
+		if(!$this->pays)
+			return false;
+
+		$pays = json_decode($this->pays, true);
+		return $pays;
+	}
 }
