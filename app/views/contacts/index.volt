@@ -4,7 +4,10 @@
 	<div class="container">
 		<div class="contact-head">
 			<h3>Контакты</h3>
-			{{ siteInfo.text_contacts }}
+			
+			<div class="money-info">
+				{{ siteInfo.text_contacts }}
+			</div>
 		</div>
 		<div class="address">
 			<h3>Где мы находимся</h3>

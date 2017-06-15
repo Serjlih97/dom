@@ -8,8 +8,8 @@
 	<link href="/html/css/slick-theme.css" rel='stylesheet' type='text/css' />
 	<link href="/html/css/style.css" rel='stylesheet' type='text/css' />
 	<link href="/html/css/jquery.fancybox.min.css" rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' subset="cyrillic" rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic,400italic,600italic' subset="cyrillic" rel='stylesheet' type='text/css'>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

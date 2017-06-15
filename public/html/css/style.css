@@ -30,6 +30,11 @@ img
 {
 	max-width: 100%;
 }
+.money-info
+{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
 .search-tabs
 {
 	margin-bottom: 20px;
