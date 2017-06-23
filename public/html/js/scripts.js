@@ -104,7 +104,7 @@ var main = {
 				if(typeof e.success != 'undefined' && e.success)
 				{
 					$('._ajax-content').html(e.html);
-					$(document).scrollTop($('._news-list').offset().top);
+					$(document).scrollTop($('.content-main').offset().top);
 				}
 			});
 		},
