@@ -102,7 +102,10 @@ var main = {
 			}).done(function(e)
 			{
 				if(typeof e.success != 'undefined' && e.success)
+				{
 					$('._ajax-content').html(e.html);
+					$(document).scrollTop($('._news-list').offset().top);
+				}
 			});
 		},
 		getHelpsPage: function(page)
